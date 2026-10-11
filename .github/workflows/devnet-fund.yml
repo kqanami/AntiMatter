@@ -10,6 +10,7 @@ jobs:
   airdrop:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install Solana CLI
         uses: solana-foundation/github-actions/setup-all@v0.2.15
         with:
