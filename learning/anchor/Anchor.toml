@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-antimatter_learning = "24HLBRfv1vZsty1w9A27qn1QgQJDtbQGbU9HC1fqwk9B"
+antimatter_learning = "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf"
 
 [provider]
 cluster = "devnet"

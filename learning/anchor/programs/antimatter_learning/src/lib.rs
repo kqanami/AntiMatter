@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("24HLBRfv1vZsty1w9A27qn1QgQJDtbQGbU9HC1fqwk9B");
+declare_id!("AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf");
 
 #[program]
 pub mod antimatter_learning {
