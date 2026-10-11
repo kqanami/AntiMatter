@@ -1,0 +1,25 @@
+{
+  "cluster": "devnet",
+  "programId": "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf",
+  "wallet": "ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd",
+  "counter": "AhSWv7U5Ub5Tra99rrX8k1aocswa7r7693NpHrfTACkA",
+  "countBefore": "0",
+  "countAfter": "1",
+  "profile": "CZyfjGePdXSs8G4LdzK9Av5XmysvLXGVC5ZH9ro5wr4R",
+  "displayName": "ANTIMATTER",
+  "bio": "Профиль обновлён через Anchor PDA",
+  "transactions": {
+    "ping": "4cKrJj7x1h2QsEtJzwhGMCgkdSTYE3y6LEbpfnDsko1VbkfPVxmtum62oiYBHK8sPZYVAnsAPKRis4XXYZPzn6it",
+    "initializeCounter": "4i8QP4aCprTNPXBT3sK6g8Gp6U3BcuRK8guZ1ZcRVB6EJTwS96rU2xQPqhcZs33ACbhxTc2sEFr8Vej4R1DukZJx",
+    "incrementCounter": "4XnZrpoHtoGYkGSTuTccM3rvmrKLFBNpHkDSnmXG8TPnoKunXjeD3ywNnmCAPf1eYhpzQhcU8913ECPFSHsCPrrm",
+    "createProfile": "2SPRpa39JEVR3xYp3JQPZvVQHukV9gETTJTv115x63z1CNaEkbm5KeRYhrAD5RMtzoXEz8nPhAhPzgNVk92Ego7q",
+    "updateProfile": "5czNpjc5gVwSUFVxLVdqB9wff8ZnecN76iKFwGJcUbhS1FbuisVYnpy8LStu9DMZxY9oNdr3hZ7qS23WGNH8bBEt"
+  },
+  "explorer": {
+    "ping": "https://explorer.solana.com/tx/4cKrJj7x1h2QsEtJzwhGMCgkdSTYE3y6LEbpfnDsko1VbkfPVxmtum62oiYBHK8sPZYVAnsAPKRis4XXYZPzn6it?cluster=devnet",
+    "initializeCounter": "https://explorer.solana.com/tx/4i8QP4aCprTNPXBT3sK6g8Gp6U3BcuRK8guZ1ZcRVB6EJTwS96rU2xQPqhcZs33ACbhxTc2sEFr8Vej4R1DukZJx?cluster=devnet",
+    "incrementCounter": "https://explorer.solana.com/tx/4XnZrpoHtoGYkGSTuTccM3rvmrKLFBNpHkDSnmXG8TPnoKunXjeD3ywNnmCAPf1eYhpzQhcU8913ECPFSHsCPrrm?cluster=devnet",
+    "createProfile": "https://explorer.solana.com/tx/2SPRpa39JEVR3xYp3JQPZvVQHukV9gETTJTv115x63z1CNaEkbm5KeRYhrAD5RMtzoXEz8nPhAhPzgNVk92Ego7q?cluster=devnet",
+    "updateProfile": "https://explorer.solana.com/tx/5czNpjc5gVwSUFVxLVdqB9wff8ZnecN76iKFwGJcUbhS1FbuisVYnpy8LStu9DMZxY9oNdr3hZ7qS23WGNH8bBEt?cluster=devnet"
+  }
+}

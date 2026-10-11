@@ -1,15 +1,15 @@
 # Задания 1–8: Solana Devnet
 
-Это учебная часть ANTIMATTER. Все SOL здесь тестовые и используются только в Devnet. Страница `learning.html` показывает подтверждённый перевод, позволяет разобрать произвольную Devnet-транзакцию, проверить токен AMT и открыть работающий MVP. После развёртывания Anchor-программы она также сможет читать PDA-состояние.
+Это учебная часть ANTIMATTER. Все SOL здесь тестовые и используются только в Devnet. Страница `learning.html` показывает подтверждённый перевод, позволяет разобрать произвольную Devnet-транзакцию, проверить токен AMT, читать состояние PDA и открыть работающий MVP.
 
 | Задание | Реализация | Проверка |
 | --- | --- | --- |
 | 1. Кошелёк и первый перевод | `scripts/learning/first-transfer.ts` | [Транзакция 0,001 SOL в Explorer](https://explorer.solana.com/tx/KwgF96gR19aV2ZeF7iF2rr6YBqsykHD96LtDXWSHonmxeTJaJYDm4er2mC466B7D2NWz2DY8BooxJQ79PzGjwkD?cluster=devnet), `verification/learning-first-transfer.json` |
 | 2. Transaction Detective | `scripts/learning/inspect-transaction.ts` и браузерная страница | `verification/learning-transaction-analysis.json`: три account, System Program, `transfer`, комиссия 5 000 lamports |
 | 3. Rust CLI | `rust-cli/` | `cargo check`; выполнены команды `balance` и `tx` на реальном Devnet RPC |
-| 4. Первая Solana Program | `anchor/programs/antimatter_learning/`, инструкция `ping` | Rust `cargo check` пройден; SBF-сборка и Devnet-развёртывание ещё не выполнены |
-| 5. Anchor Counter | Там же, `initialize_counter` / `increment_counter`; клиент `scripts/learning/client.ts` | Клиент и код компилируются; транзакции ожидают развёртывания |
-| 6. PDA-профиль | Там же, `create_profile` / `update_profile`, PDA из `profile` + адреса владельца | Вывод PDA и проверки клиента выполнены; on-chain аккаунт ещё не создан |
+| 4. Первая Solana Program | `anchor/programs/antimatter_learning/`, инструкция `ping` | [SBF-сборка](https://github.com/kqanami/AntiMatter/actions/runs/38156009096), `verification/learning-program-deploy.json` и вызов `ping` в `verification/learning-program-calls.json` |
+| 5. Anchor Counter | Там же, `initialize_counter` / `increment_counter`; клиент `scripts/learning/client.ts` | `verification/learning-program-calls.json`: создание PDA, увеличение и итоговое значение счётчика |
+| 6. PDA-профиль | Там же, `create_profile` / `update_profile`, PDA из `profile` + адреса владельца | `verification/learning-program-calls.json`: создание, обновление и чтение on-chain профиля |
 | 7. SPL Token и метаданные | [AMT mint](https://explorer.solana.com/address/GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR?cluster=devnet), `scripts/learning/token.ts`, `token/metadata.json`, перевод через `TransferChecked` | `verification/learning-week7-token.json`, `verification/learning-week7-metadata.json`; mint, supply и metadata проверяются в Devnet |
 | 8. Web3 MVP | `desktop.html` — два экранных устройства, сверка кода, локальная подпись, перевод AMT и подтверждение в Devnet | `verification/learning-week8-mvp.json`; проверка реального зачисления через путь приложения |
 
@@ -60,9 +60,11 @@ cargo run --manifest-path learning/rust-cli/Cargo.toml -- tx KwgF96gR19aV2ZeF7iF
 
 Rust CLI использует установленный `curl` для HTTPS. Команды: `balance ADDRESS`, `account ADDRESS`, `program ADDRESS`, `tx SIGNATURE`. Каждая команда сначала проверяет genesis hash Devnet.
 
-## Развёртывание заданий 4–6 на Mac, Linux или WSL
+## Сборка и развёртывание заданий 4–6
 
-Понадобятся Node/pnpm, Rust, Solana CLI с SBF toolchain и Anchor CLI 1.2.0. Для Windows официальная установка Solana/Anchor использует WSL. Установите инструменты по [инструкции Solana](https://solana.com/docs/intro/installation) и [инструкции Anchor](https://www.anchor-lang.com/docs/installation). Здесь на Windows установлен обычный Rust, но нет SBF toolchain и WSL-дистрибутива, поэтому `anchor build` и `anchor deploy` здесь не запускались.
+Программа собрана в SBF в GitHub Actions: бинарник `learning/build/antimatter_learning.so`, IDL `learning/idl/antimatter_learning.json`, SHA-256 и адрес — в `verification/learning-sbf-build.json`. Сборка использует Solana CLI и Anchor CLI 1.2.0 на Linux. Program ID при сборке берётся из зашифрованного секрета GitHub Actions `LEARNING_PROGRAM_KEYPAIR`; приватный ключ отсутствует в Git. Для повторной локальной сборки на Mac, Linux или WSL установите инструменты по [инструкции Solana](https://solana.com/docs/intro/installation) и [инструкции Anchor](https://www.anchor-lang.com/docs/installation).
+
+На Windows готовый SBF можно отправить в Devnet командой `pnpm learning:deploy deploy`. Она проверяет genesis hash, SHA-256 и Program ID, загружает бинарник по частям в восстанавливаемый буфер и создаёт исполняемый аккаунт. Команда `pnpm learning:deploy upgrade` обновляет уже развёрнутую программу. Ключи и прогресс хранятся только в игнорируемой `.devnet/`. При ограничении публичного RPC повторите команду: уже подтверждённые части не загружаются заново. `LEARNING_RPC_URL` задаёт иной HTTPS RPC Devnet.
 
 Если переносите проект на другой компьютер **с сохранением прежнего Program ID**, перенесите в защищённом виде `.devnet/learning-program-keypair.json` и `.devnet/learning-wallet.json`. Не добавляйте их в репозиторий или публичный архив. Если не переносить эти файлы, `learning:prepare` создаст новые ключи и автоматически обновит Program ID в Rust, Anchor.toml, веб-клиенте и предварительном IDL; прежний ID тогда использовать нельзя.
 
@@ -93,6 +95,8 @@ pnpm learning:client profile:create "Имя" "Учебный профиль"
 pnpm learning:client profile:update "Имя" "Обновлённое описание"
 pnpm learning:client profile:show
 ```
+
+Команда `pnpm learning:verify-program` последовательно вызывает все пять инструкций в Devnet и сохраняет адреса PDA, подписи транзакций и итоговое состояние в `verification/learning-program-calls.json`. Повторный запуск увеличивает счётчик ещё на один и расходует тестовые SOL.
 
 `learning:prepare` копирует ключ программы в стандартный каталог `learning/anchor/target/deploy/`, который Anchor использует при развёртывании. `learning:idl:sync` принимает только IDL с тем же Program ID и всеми пятью ожидаемыми инструкциями. После сборки он заменяет предварительный IDL реально сгенерированным Anchor IDL. Для клиента по умолчанию используется `.devnet/learning-wallet.json`; другой тестовый ключ можно задать переменной `LEARNING_KEYPAIR`. После развёртывания откройте `learning.html`, введите адрес этого кошелька и проверьте счётчик и профиль. Ссылки на транзакции команд выводятся в Solana Explorer.
 

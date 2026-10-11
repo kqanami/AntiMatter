@@ -1,0 +1,9 @@
+{
+  "cluster": "devnet",
+  "programId": "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf",
+  "programData": "9HRL1BJn9VoPduWpfxeLDqqZ9ZHfNJYyA7d6N7wadL7G",
+  "authority": "ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd",
+  "binarySha256": "be6a02d5f97981b2bccf453388069652fd0202e411d80bc046d00f786233e637",
+  "signature": "b7pnEiFfDDb58Br5q2ovRitAjxkB3nuqeDVbqczG1GFTuqhbhmGMdkHPNsTSPtQPuT5e3M6cS1Kb3XVN9MYgiFH",
+  "explorer": "https://explorer.solana.com/tx/b7pnEiFfDDb58Br5q2ovRitAjxkB3nuqeDVbqczG1GFTuqhbhmGMdkHPNsTSPtQPuT5e3M6cS1Kb3XVN9MYgiFH?cluster=devnet"
+}

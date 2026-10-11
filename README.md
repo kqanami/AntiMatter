@@ -2,7 +2,7 @@
 
 ## Учебные задания Solana 1–8
 
-Добавлен [технический модуль](learning/README.md) с реальным переводом тестовых SOL, разбором транзакций, Rust CLI, Anchor-программой, счётчиком, PDA-профилем, токеном AMT с метаданными и Web3 MVP. В браузере откройте `/learning.html` и `/desktop.html`. Перевод, разбор, выпуск AMT и его клиентский перевод подтверждены Devnet; Anchor-программа прошла `cargo check`, но её SBF-сборка и развёртывание на Devnet ожидают Mac, Linux или WSL с Solana/Anchor. Инструкции и статус каждого задания находятся в `learning/README.md`.
+Добавлен [технический модуль](learning/README.md) с реальным переводом тестовых SOL, разбором транзакций, Rust CLI, Anchor-программой, счётчиком, PDA-профилем, токеном AMT с метаданными и Web3 MVP. В браузере откройте `/learning.html` и `/desktop.html`. Все восемь заданий проверены: переводы и метаданные подтверждены Devnet, Anchor-программа собрана в SBF и развёрнута, `ping`, счётчик и профиль вызваны в сети. Адреса и подписи транзакций указаны в `learning/README.md` и `verification/`.
 
 [Отчёт о восьми заданиях со снимками подтверждения](docs/Отчёт%20о%20выполнении%20восьми%20заданий%20Solana.docx).
 
@@ -20,7 +20,7 @@ AMT использует обычную программу SPL Token: mint, от
 
 Перед биометрией или PIN нативный подписант Android/iOS разбирает сообщение транзакции и сверяет сеть, получателя, сумму и метку сеанса с согласованным предложением. Любое расхождение запрещает подпись. Android-парсер проверен на правильных SOL/AMT сообщениях и на подмене этих полей; проверка Swift и фактического подписания на iPhone остаётся задачей для Mac и устройства.
 
-Mint AMT в Devnet: [`GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR`](https://explorer.solana.com/address/GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR?cluster=devnet). Выпущено 1 000 AMT с 9 знаками после запятой. Первоначальный выпуск и перевод 1 AMT между двумя тестовыми кошельками проверены на самой сети через код приложения: [`транзакция`](https://explorer.solana.com/tx/3RYuSiJTGFfiYSjHvpLHQLbroSpEZKTSLa82nKoujEPPP8AfGbsDTXhfTtv3St1Atyj74a9wpVg4S2D9wBwLodiG?cluster=devnet). Имя и символ AMT пока заданы в приложении и манифесте; on-chain metadata для отображения названия в сторонних кошельках ещё не выпускались.
+Mint AMT в Devnet: [`GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR`](https://explorer.solana.com/address/GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR?cluster=devnet). Выпущено 1 000 AMT с 9 знаками после запятой. Первоначальный выпуск и перевод 1 AMT между двумя тестовыми кошельками проверены на самой сети через код приложения: [`транзакция`](https://explorer.solana.com/tx/3RYuSiJTGFfiYSjHvpLHQLbroSpEZKTSLa82nKoujEPPP8AfGbsDTXhfTtv3St1Atyj74a9wpVg4S2D9wBwLodiG?cluster=devnet). On-chain Metaplex Metadata создан и ссылается на публичные JSON и изображение в `learning/token/`.
 
 Для повторной проверки есть идемпотентный скрипт `scripts/create-devnet-token.ts`. Он хранит тестовый ключ владельца mint только в игнорируемой папке `.devnet/` и записывает публичный mint в `.env.local`. Секрет нельзя переносить в APK, архив iPhone или публиковать. Запуск:
 

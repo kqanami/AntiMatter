@@ -1,0 +1,17 @@
+{
+  "sourceProgramId": "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf",
+  "generatedIdlAddress": "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf",
+  "binaryBytes": 170928,
+  "binarySha256": "be6a02d5f97981b2bccf453388069652fd0202e411d80bc046d00f786233e637",
+  "instructions": [
+    "ping",
+    "initialize_counter",
+    "increment_counter",
+    "create_profile",
+    "update_profile"
+  ],
+  "workflowRun": "https://github.com/kqanami/AntiMatter/actions/runs/38156009096",
+  "deployed": true,
+  "deploymentSignature": "b7pnEiFfDDb58Br5q2ovRitAjxkB3nuqeDVbqczG1GFTuqhbhmGMdkHPNsTSPtQPuT5e3M6cS1Kb3XVN9MYgiFH",
+  "onChainBinaryMatches": true
+}

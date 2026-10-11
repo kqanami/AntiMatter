@@ -3,7 +3,7 @@ import {sha256} from 'js-sha256';
 import {PublicKey} from '@solana/web3.js';
 import {checkNetwork,rpc,type Rpc} from './solana';
 
-export const LEARNING_PROGRAM_ID=new PublicKey('24HLBRfv1vZsty1w9A27qn1QgQJDtbQGbU9HC1fqwk9B');
+export const LEARNING_PROGRAM_ID=new PublicKey('AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf');
 type RawAccount={value:{owner:string;executable:boolean;data:[string,string]}|null};
 
 function discriminator(name:string){return Buffer.from(sha256(`account:${name}`).slice(0,16),'hex');}

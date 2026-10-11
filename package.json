@@ -16,6 +16,8 @@
     "learning:inspect": "tsx scripts/learning/inspect-transaction.ts",
     "learning:client": "tsx scripts/learning/client.ts",
     "learning:token": "tsx scripts/learning/token.ts",
+    "learning:deploy": "tsx scripts/learning/deploy-program.ts",
+    "learning:verify-program": "tsx scripts/learning/verify-program.ts",
     "learning:idl": "node scripts/learning/generate-idl.mjs",
     "learning:prepare": "node scripts/learning/prepare-program.mjs",
     "learning:idl:sync": "node scripts/learning/sync-built-idl.mjs"

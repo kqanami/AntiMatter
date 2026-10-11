@@ -1,125 +1,12 @@
 {
-  "address": "24HLBRfv1vZsty1w9A27qn1QgQJDtbQGbU9HC1fqwk9B",
+  "address": "AAVTtyKDe54bhYoHeHkdpRw6tGDUbJkZS8LiwU6pQSdf",
   "metadata": {
     "name": "antimatter_learning",
     "version": "0.1.0",
     "spec": "0.1.0",
-    "description": "Provisional IDL; replace or verify after Anchor build"
+    "description": "ANTIMATTER Devnet learning program: ping, counter, and PDA profile"
   },
   "instructions": [
-    {
-      "name": "ping",
-      "discriminator": [
-        173,
-        0,
-        94,
-        236,
-        73,
-        133,
-        225,
-        153
-      ],
-      "accounts": [
-        {
-          "name": "authority",
-          "signer": true
-        }
-      ],
-      "args": []
-    },
-    {
-      "name": "initialize_counter",
-      "discriminator": [
-        67,
-        89,
-        100,
-        87,
-        231,
-        172,
-        35,
-        124
-      ],
-      "accounts": [
-        {
-          "name": "authority",
-          "signer": true,
-          "writable": true
-        },
-        {
-          "name": "counter",
-          "writable": true,
-          "pda": {
-            "seeds": [
-              {
-                "kind": "const",
-                "value": [
-                  99,
-                  111,
-                  117,
-                  110,
-                  116,
-                  101,
-                  114
-                ]
-              },
-              {
-                "kind": "account",
-                "path": "authority"
-              }
-            ]
-          }
-        },
-        {
-          "name": "system_program",
-          "address": "11111111111111111111111111111111"
-        }
-      ],
-      "args": []
-    },
-    {
-      "name": "increment_counter",
-      "discriminator": [
-        16,
-        125,
-        2,
-        171,
-        73,
-        24,
-        207,
-        229
-      ],
-      "accounts": [
-        {
-          "name": "authority",
-          "signer": true
-        },
-        {
-          "name": "counter",
-          "writable": true,
-          "pda": {
-            "seeds": [
-              {
-                "kind": "const",
-                "value": [
-                  99,
-                  111,
-                  117,
-                  110,
-                  116,
-                  101,
-                  114
-                ]
-              },
-              {
-                "kind": "account",
-                "path": "authority"
-              }
-            ]
-          }
-        }
-      ],
-      "args": []
-    },
     {
       "name": "create_profile",
       "discriminator": [
@@ -135,8 +22,8 @@
       "accounts": [
         {
           "name": "authority",
-          "signer": true,
-          "writable": true
+          "writable": true,
+          "signer": true
         },
         {
           "name": "profile",
@@ -179,6 +66,122 @@
       ]
     },
     {
+      "name": "increment_counter",
+      "discriminator": [
+        16,
+        125,
+        2,
+        171,
+        73,
+        24,
+        207,
+        229
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "relations": [
+            "counter"
+          ]
+        },
+        {
+          "name": "counter",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  117,
+                  110,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "authority"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_counter",
+      "discriminator": [
+        67,
+        89,
+        100,
+        87,
+        231,
+        172,
+        35,
+        124
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "counter",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  117,
+                  110,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "authority"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "ping",
+      "discriminator": [
+        173,
+        0,
+        94,
+        236,
+        73,
+        133,
+        225,
+        153
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
       "name": "update_profile",
       "discriminator": [
         98,
@@ -193,7 +196,10 @@
       "accounts": [
         {
           "name": "authority",
-          "signer": true
+          "signer": true,
+          "relations": [
+            "profile"
+          ]
         },
         {
           "name": "profile",
@@ -260,6 +266,28 @@
       ]
     }
   ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "CounterOverflow",
+      "msg": "Counter overflow"
+    },
+    {
+      "code": 6001,
+      "name": "EmptyName",
+      "msg": "Profile name is empty"
+    },
+    {
+      "code": 6002,
+      "name": "NameTooLong",
+      "msg": "Profile name exceeds 32 UTF-8 bytes"
+    },
+    {
+      "code": 6003,
+      "name": "BioTooLong",
+      "msg": "Profile bio exceeds 160 UTF-8 bytes"
+    }
+  ],
   "types": [
     {
       "name": "Counter",
@@ -308,28 +336,6 @@
           }
         ]
       }
-    }
-  ],
-  "errors": [
-    {
-      "code": 6000,
-      "name": "CounterOverflow",
-      "msg": "Counter overflow"
-    },
-    {
-      "code": 6001,
-      "name": "EmptyName",
-      "msg": "Profile name is empty"
-    },
-    {
-      "code": 6002,
-      "name": "NameTooLong",
-      "msg": "Profile name exceeds 32 UTF-8 bytes"
-    },
-    {
-      "code": 6003,
-      "name": "BioTooLong",
-      "msg": "Profile bio exceeds 160 UTF-8 bytes"
     }
   ]
 }
