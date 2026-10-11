@@ -4,10 +4,10 @@
   "decimals": 9,
   "supply": "1000000000000",
   "treasury": "5ew727iYZr96Cn7kiwgnrsZWeoEFUzxaWbyPWPYRuZtH",
-  "treasuryAmount": "991000000000",
+  "treasuryAmount": "989000000000",
   "metadataAddress": "DZzJr29qZ8tsG6pRwhywpZMrJmKpQeUJQaevYo3A8C9",
-  "metadataCreated": false,
-  "metadataMatches": false,
+  "metadataCreated": true,
+  "metadataMatches": true,
   "metadataUri": "https://raw.githubusercontent.com/kqanami/AntiMatter/main/learning/token/metadata.json",
   "explorer": "https://explorer.solana.com/address/GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR?cluster=devnet"
 }

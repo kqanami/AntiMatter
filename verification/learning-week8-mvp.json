@@ -1,0 +1,14 @@
+{
+  "cluster": "devnet",
+  "scenario": "ANTIMATTER AMT app transfer path",
+  "mint": "GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR",
+  "sender": "EN3WxWvgKCqCH9mZxCx6wxa3GLYEZ6nZRqP7adVibonj",
+  "recipient": "JBF6eqV7HTX5gw9ZPAcxdig5sytRUr9jWAecbQHYVwp7",
+  "amountBaseUnits": "1000000000",
+  "beforeBaseUnits": "0",
+  "afterBaseUnits": "1000000000",
+  "fundingSignature": "ZgHLTRS1RR8RvZ8Kij3G8taqGowszaFsVmkWCS8tRrk9qSZZaddz1pbtNJ98Wdv9KtkfJ9mRXi1LhAuLFHk5pr5",
+  "transferSignature": "36kjg3UY4Z4uMkwYckMLR3S8z14ATiV38jCDMM6rMtu6sro6w5KJJBWfNfvrbvhQacW6VGwxEHMAJ6rKAugHD9rK",
+  "status": "confirmed",
+  "explorer": "https://explorer.solana.com/tx/36kjg3UY4Z4uMkwYckMLR3S8z14ATiV38jCDMM6rMtu6sro6w5KJJBWfNfvrbvhQacW6VGwxEHMAJ6rKAugHD9rK?cluster=devnet"
+}

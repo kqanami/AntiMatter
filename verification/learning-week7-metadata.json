@@ -1,0 +1,8 @@
+{
+  "cluster": "devnet",
+  "mint": "GTYjjjnW9hcLg1UrgfZBfpL4BXP74eJcZ9TWDeguL9MR",
+  "metadataAddress": "DZzJr29qZ8tsG6pRwhywpZMrJmKpQeUJQaevYo3A8C9",
+  "metadataUri": "https://raw.githubusercontent.com/kqanami/AntiMatter/main/learning/token/metadata.json",
+  "signature": "2czACqYGbCvqK8CRn9uxNZPJfbyj73nNUsLBPuasX16MfQWfZWdTveZuxrq5dRSDaRakpPzAjmfKw9fwaANiaTtu",
+  "explorer": "https://explorer.solana.com/tx/2czACqYGbCvqK8CRn9uxNZPJfbyj73nNUsLBPuasX16MfQWfZWdTveZuxrq5dRSDaRakpPzAjmfKw9fwaANiaTtu?cluster=devnet"
+}
