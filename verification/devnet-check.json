@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-30T10:52:32.616Z",
+  "rpc": "https://api.devnet.solana.com",
+  "genesisVerified": true,
+  "transferConfirmed": false,
+  "slot": 505879102,
+  "sender": "9aNAfPSbZ8SHWABtPysFSKMG6VQKwGtoov5Vimz1WRR9",
+  "receiver": "E7bcU6vXdCX8NoGNFv5gUbhPoTUnVD1v1FY8RMPF641v",
+  "error": "Solana: Internal error"
+}

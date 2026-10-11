@@ -1,0 +1,16 @@
+[toolchain]
+anchor_version = "1.2.0"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+antimatter_learning = "24HLBRfv1vZsty1w9A27qn1QgQJDtbQGbU9HC1fqwk9B"
+
+[provider]
+cluster = "devnet"
+wallet = "../../.devnet/learning-wallet.json"
+
+[workspace]
+members = ["programs/antimatter_learning"]

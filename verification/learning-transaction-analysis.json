@@ -1,0 +1,55 @@
+{
+  "cluster": "devnet",
+  "signature": "KwgF96gR19aV2ZeF7iF2rr6YBqsykHD96LtDXWSHonmxeTJaJYDm4er2mC466B7D2NWz2DY8BooxJQ79PzGjwkD",
+  "explorer": "https://explorer.solana.com/tx/KwgF96gR19aV2ZeF7iF2rr6YBqsykHD96LtDXWSHonmxeTJaJYDm4er2mC466B7D2NWz2DY8BooxJQ79PzGjwkD?cluster=devnet",
+  "slot": 505882108,
+  "time": "2026-09-30T11:04:14.000Z",
+  "status": "confirmed",
+  "feeLamports": 5000,
+  "accountChanges": [
+    {
+      "address": "ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd",
+      "signer": true,
+      "writable": true,
+      "beforeLamports": 10000000,
+      "afterLamports": 8995000,
+      "deltaLamports": -1005000
+    },
+    {
+      "address": "58pAE7Qpq8iS2NWzLztCsTuUnQcwnEjKYvrTR6oBw4Ud",
+      "signer": false,
+      "writable": true,
+      "beforeLamports": 0,
+      "afterLamports": 1000000,
+      "deltaLamports": 1000000
+    },
+    {
+      "address": "11111111111111111111111111111111",
+      "signer": false,
+      "writable": false,
+      "beforeLamports": 1,
+      "afterLamports": 1,
+      "deltaLamports": 0
+    }
+  ],
+  "instructions": [
+    {
+      "index": 0,
+      "programId": "11111111111111111111111111111111",
+      "program": "system",
+      "parsed": {
+        "info": {
+          "destination": "58pAE7Qpq8iS2NWzLztCsTuUnQcwnEjKYvrTR6oBw4Ud",
+          "lamports": 1000000,
+          "source": "ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd"
+        },
+        "type": "transfer"
+      }
+    }
+  ],
+  "innerInstructions": [],
+  "logs": [
+    "Program 11111111111111111111111111111111 invoke [1]",
+    "Program 11111111111111111111111111111111 success"
+  ]
+}

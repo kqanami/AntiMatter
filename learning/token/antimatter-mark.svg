@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="ANTIMATTER token">
+  <defs>
+    <radialGradient id="space" cx="43%" cy="37%" r="70%"><stop stop-color="#343434"/><stop offset=".55" stop-color="#101010"/><stop offset="1"/></radialGradient>
+    <radialGradient id="orb" cx="32%" cy="24%" r="78%"><stop stop-color="#fff"/><stop offset=".23" stop-color="#c7c7c7"/><stop offset=".61" stop-color="#555"/><stop offset=".82" stop-color="#121212"/><stop offset="1"/></radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".5" stop-color="#777"/><stop offset="1" stop-color="#e5e5e5"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="60" fill="url(#space)"/>
+  <circle cx="256" cy="256" r="173" fill="none" stroke="url(#ring)" stroke-width="3" opacity=".66"/>
+  <circle cx="256" cy="256" r="126" fill="url(#orb)"/>
+  <circle cx="256" cy="256" r="105" fill="none" stroke="#f7f7f7" stroke-opacity=".26" stroke-width="2"/>
+  <path d="M98 303c86 53 230 60 316-8" fill="none" stroke="#fff" stroke-opacity=".82" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="404" cy="301" r="8" fill="#fff"/>
+  <path d="M222 204l34-61 35 61-35 64z" fill="#fff" fill-opacity=".84"/>
+  <path d="M219 308l37 60 37-60-37-28z" fill="#fff" fill-opacity=".25"/>
+</svg>

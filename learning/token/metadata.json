@@ -1,0 +1,17 @@
+{
+  "name": "ANTIMATTER Test",
+  "symbol": "AMT",
+  "description": "A learning token for the ANTIMATTER prototype on Solana Devnet. AMT has no monetary value.",
+  "image": "https://raw.githubusercontent.com/kqanami/AntiMatter/main/learning/token/antimatter-mark.svg",
+  "external_url": "https://github.com/kqanami/AntiMatter",
+  "attributes": [
+    { "trait_type": "Network", "value": "Solana Devnet" },
+    { "trait_type": "Purpose", "value": "Education and prototype testing" }
+  ],
+  "properties": {
+    "files": [
+      { "uri": "https://raw.githubusercontent.com/kqanami/AntiMatter/main/learning/token/antimatter-mark.svg", "type": "image/svg+xml" }
+    ],
+    "category": "image"
+  }
+}

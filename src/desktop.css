@@ -1,0 +1,32 @@
+:root{font-family:'Manrope Variable',Manrope,sans-serif;color:#fff;background:#000}
+*{box-sizing:border-box;box-shadow:none!important;text-shadow:none!important}
+body{margin:0;background:#000;color:#fff}
+button{font:inherit;cursor:pointer}
+.desktop-shell{max-width:1300px;margin:auto;padding:28px 35px 45px}
+.desktop-shell>header{display:flex;justify-content:space-between;align-items:center;padding-bottom:21px}
+.desktop-brand{display:flex;gap:11px;align-items:center;font-size:23px;font-weight:800;letter-spacing:.14em}
+.desktop-mark{width:34px;height:34px;display:grid;place-items:center;font-size:22px;font-weight:750;letter-spacing:0}
+.period{color:#fff}
+.desktop-label{font-size:10px;font-weight:700;letter-spacing:2px;color:#fff}
+.desktop-label i{display:inline-block;width:5px;height:5px;margin:0 8px 2px;border-radius:0;background:#fff}
+.desktop-heading{display:flex;align-items:end;justify-content:space-between;gap:40px;margin:31px auto 21px;max-width:970px}
+.desktop-heading p{font-size:10px;letter-spacing:3px;font-weight:800;color:#fff}
+.desktop-heading h1{font-size:29px;line-height:1.23;letter-spacing:-1.2px;font-weight:600;margin:9px 0 0}
+.desktop-guide{display:flex;flex-direction:column;gap:7px;color:#fff;font-size:11px;padding-bottom:3px}
+.phones{display:flex;justify-content:center;align-items:center;gap:26px}
+.phone-slot{width:min(380px,38vw)}
+.phone-label{height:29px;display:flex;justify-content:space-between;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;padding:0 3px}
+.phone-label b{color:#fff;font-size:19px;line-height:10px;font-weight:400}
+.phone-frame{height:min(760px,69vw);min-height:630px;overflow:hidden;border-radius:6px;background:#000}
+.phone-frame iframe{width:100%;height:100%;border:0;border-radius:6px;background:#000}
+.desktop-flow{display:flex;flex-direction:column;align-items:center;gap:45px;color:#fff;font-size:28px}
+.desktop-flow i{width:1px;height:150px;background:#fff}
+.desktop-shell>footer{max-width:990px;margin:27px auto 0;padding-top:18px;display:flex;justify-content:space-between;gap:22px;align-items:center}
+.desktop-shell>footer p{font-size:11px;line-height:1.6;color:#fff;max-width:710px;margin:0}
+.desktop-shell>footer button{background:#000;border:0;border-radius:4px;padding:12px 16px;color:#fff;font-size:11px;white-space:nowrap}
+.desktop-shell>footer button:hover{background:#fff;color:#000}
+.desktop-shell>footer button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:850px){.desktop-shell{padding:20px 12px}.desktop-heading{display:block;text-align:center}.desktop-guide{margin-top:16px}.phones{gap:8px}.phone-slot{width:47vw}.phone-frame{height:75vw;min-height:575px}.desktop-flow{gap:20px;font-size:16px}.desktop-flow i{height:60px}.desktop-heading h1{font-size:22px}.desktop-shell>footer{display:block}.desktop-shell>footer button{margin-top:12px}}
+@media(max-width:650px){.phones{flex-direction:column}.phone-slot{width:min(380px,96vw)}.phone-frame{height:710px}.desktop-flow{flex-direction:row}.desktop-flow i{width:55px;height:1px}.desktop-label{display:none}}
+
+.desktop-learning{font-size:11px;white-space:nowrap;color:#fff;text-decoration:none;padding:12px 0}.desktop-learning:hover{text-decoration:underline}

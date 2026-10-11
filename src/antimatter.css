@@ -1,0 +1,224 @@
+:root{--paper:#000;--ink:#fafafa;--line:#303036;--muted:#a9a9b2;--silver:#d6d8dc;--dark:#0d0d0f}
+.funding-sol{margin:8px 0 0;color:#b8b8c0;font-size:11px;font-variant-numeric:tabular-nums}
+*,:before,:after{box-shadow:none!important;text-shadow:none!important;filter:none!important}
+body{background:#000;color:#fafafa}
+button{transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+button:active:not(:disabled){transform:none}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #fafafa;outline-offset:3px}
+.screen,.onboarding,.transfer-screen,.browser-entry{background:#000!important;color:#fafafa}
+.screen{border-left:1px solid #1e1e22;border-right:1px solid #1e1e22;isolation:isolate;overflow-x:hidden;padding-bottom:max(14px,env(safe-area-inset-bottom))}
+.screen:before,.screen:after,.amount-section:before,.person-card:before,.person-card:after,.transfer-screen:before,.transfer-flight:before,.transfer-flight:after{display:none!important}
+.black-hole-hero{position:absolute;right:-145px;top:-90px;width:355px;height:280px;z-index:0;pointer-events:none;opacity:.78;mask-image:linear-gradient(to left,#000 18%,transparent 92%)}
+.black-hole-canvas{isolation:isolate;overflow:hidden;background:#000}
+.black-hole-canvas-element{position:absolute;inset:0;display:block;width:100%;height:100%}
+.black-hole-fallback{display:none;position:absolute;left:calc(50% - 103px);top:calc(52% - 103px);width:205px;height:205px;border-radius:50%;border:2px solid #707078;opacity:.5;background:radial-gradient(circle,#000 0 47%,#9a9aa0 48%,#26262c 51%,#000 57%)}
+.black-hole-canvas[data-webgl]:not([data-webgl=""]) .black-hole-fallback{display:block}
+.black-hole-foreground{position:relative;z-index:1;width:100%;height:100%}
+.screen>.app-header,.screen>.topline,.screen>.demo-banner,.screen>.main-content,.screen>.action-area,.screen>.bottom-area,.screen>.history-view,.screen>.error-banner{position:relative;z-index:1}
+.app-header{padding-bottom:14px;border-bottom:1px solid #252529}
+.brand{gap:10px;font-size:21px;letter-spacing:.15em;font-weight:760}
+.brand-mark{height:32px;width:32px;color:#f5f5f6}
+.brand-period{color:#9f9fa5}
+.account-button{height:40px;width:40px;background:#161619;border:1px solid #6a6a72;color:#fafafa}
+.topline{margin-top:15px;gap:8px}
+.network-pill{font-size:9px;color:#d1d1d4;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.network-pill i{background:#fafafa;width:6px;height:6px}
+.balance-link{min-height:34px;max-width:56%;padding:5px 7px 5px 10px;background:#000;border:1px solid #49494f;border-radius:999px;color:#f2f2f4;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.balance-link svg{background:#1d1d22;flex-shrink:0}
+.demo-banner{background:#000;border-color:#35353b;color:#c4c4ca;letter-spacing:.12em}
+.intro{margin-top:22px;max-width:69%}
+.intro .overline{color:#a0a0aa;letter-spacing:.2em}
+.intro h1{font-size:clamp(36px,10vw,44px);font-weight:520;letter-spacing:-.065em;line-height:1.06;margin:11px 0}
+.intro h1 span,.history-view h1 span,.result-view h1 span{color:#b6b6bc}
+.special-text{display:inline-grid;vertical-align:baseline;white-space:pre}
+.special-text-measure,.special-text-live{grid-area:1/1;white-space:pre}
+.special-text-measure{visibility:hidden}
+.intro h1 .special-text,.onboarding-content h1 .special-text{color:#fafafa}
+.intro h1 .special-text>span,.onboarding-content h1 .special-text>span{color:inherit}
+.intro p{font-size:11px;color:#b0b0b8}
+.amount-section{margin:23px 0 13px;padding:18px 15px 14px;background:#0c0c0f;border:1px solid #3a3a40;border-radius:20px;text-align:center}
+.amount-section>label{font-size:10px;color:#b6b6be;text-transform:uppercase;letter-spacing:.13em}
+.amount-input{margin:8px 0 11px;gap:7px}
+.amount-input input{font-size:clamp(43px,14vw,61px);line-height:1.1;letter-spacing:-.06em;color:#fafafa;caret-color:#fafafa}
+.amount-input.compact input{font-size:clamp(34px,10vw,44px)}
+.amount-input input[aria-invalid=true]:focus{outline:0;border-bottom:2px solid #d2a29d}
+.amount-input>span{color:#b3b3bb;font-size:14px}
+.quick-amounts{gap:6px}
+.quick-amounts button{flex:1;min-width:0;min-height:36px;padding:6px 7px;background:#151519;border:1px solid #45454c;border-radius:10px;color:#d0d0d6;font-size:11px}
+.quick-amounts button[aria-pressed=true]{background:#dedee2;border-color:#fafafa;color:#09090b}
+.funding-card{margin-top:14px;padding-top:11px;border-top:1px solid #333339;text-align:left}
+.funding-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.funding-stats>div:last-child{text-align:right}
+.funding-stats span{display:block;color:#9b9ba4;font-size:8px;font-weight:730;letter-spacing:.15em}
+.funding-stats strong{display:block;margin-top:4px;color:#f1f1f3;font-size:14px;font-weight:620;font-variant-numeric:tabular-nums;white-space:nowrap}
+.funding-stats strong small{font-size:10px;font-weight:500;color:#b7b7be}
+.funding-card p{margin:10px 0 0;padding:8px 10px;border-radius:8px;font-size:10px;line-height:1.45;min-height:31px}
+.funding-good{color:#e0e0e3;background:#17171a;border:1px solid #4b4b51}
+.funding-alert{color:#f0beb8;background:#221719;border:1px solid #815050}
+.discovery-card,.pairing-card,.candidate-card,.person-card{background:#101013;border:1px solid #48484e;border-radius:20px}
+.discovery-card{min-height:100px;padding:16px}
+.discovery-card p,.pairing-heading p,.candidate-card>p{color:#aaaab3}
+.discovery-visual span,.radar{border-color:#55555b}
+.person-avatar{background:#d9d9de;color:#111114}
+.person-copy>span,.person-copy p{color:#b5b5be}
+.person-footer{border-color:#39393f}
+.pairing-code>span{background:#19191d;border:1px solid #616168;color:#fafafa}
+.pairing-actions button:last-child,.action-button{background:#ebebee;border:1px solid #fafafa;color:#0b0b0d;font-weight:740}
+.action-button{min-height:56px;border-radius:14px}
+.action-button:disabled{background:#252529;border-color:#43434a;color:#ababaf;opacity:1}
+.continue-button{min-height:50px}
+.action-area{padding-top:9px}
+.action-caption,.live-notice{color:#aeaeB7;line-height:1.5}
+.quiet-button{color:#d2d2d8}
+.bottom-area{margin-top:auto;padding-top:14px}
+.bottom-nav{border-top:1px solid #303036}
+.bottom-nav button{color:#92929a}
+.bottom-nav button[aria-current=page]{color:#fafafa}
+.bottom-nav button[aria-current=page]:after{background:#fafafa}
+footer,.footer-wordmark{color:#94949c}
+.footer-wordmark{letter-spacing:.18em}
+.error-banner{background:#25181a;border:1px solid #815252;color:#ffd5d0}
+.record-status.confirmed{color:#d5d5da}
+.wallet-sheet{background:#0c0c0f;border:1px solid #55555b;border-bottom:0;color:#fafafa}
+.wallet-sheet input{background:#17171b;border:1px solid #55555c;color:#fff}
+.wallet-actions button{background:#e0e0e4;color:#0b0b0d}
+.wallet-actions button:last-child{background:#2e2e34;color:#f2f2f4}
+.mode-switch button.selected{border-color:#e3e3e7;background:#242429}
+.onboarding-brand{font-size:22px;letter-spacing:.14em}
+.onboarding-brand>span:first-child{font-size:29px;color:#f2f2f3}
+.onboarding-orb i{background:radial-gradient(circle,#000 0 43%,#d8d8dc 44% 47%,#4b4b52 50%,#000 55%);border:1px solid #6e6e75}
+.onboarding-content h1{font-weight:520}
+.onboarding-content input{background:#111114;border-color:#5a5a62}
+.transfer-screen{border-left:1px solid #24242a;border-right:1px solid #24242a}
+.transfer-top,.transfer-destination p{color:#b3b3bd}
+.transfer-destination .overline{color:#d4d4dc}
+.transfer-coin{background:conic-gradient(from -30deg,#6b6b71,#f8f8fa 8%,#898991 18%,#dedee3 31%,#4c4c53 46%,#e4e4e9 61%,#7b7b83 73%,#fff 87%,#5c5c62 100%);border:1px solid #f8f8fa}
+.coin-face{background:radial-gradient(circle at 31% 22%,#fff,#d4d4da 21%,#85858e 50%,#2d2d34 84%,#151518)}
+.coin-lettering{font-size:10px;letter-spacing:.18em;bottom:20px}
+.result-coin-check{background:#ededf0;color:#09090b}
+.arrival-trace{position:absolute;inset:0;z-index:14;pointer-events:none;overflow:hidden}
+.receive-field{height:clamp(210px,32vh,285px);margin:20px auto 4px;position:relative;display:flex;justify-content:center;pointer-events:none}
+.receive-field-slit{position:absolute;top:23px;width:104px;height:2px;background:#e8e8eb}
+.receive-field-slit:before,.receive-field-slit:after{content:'';position:absolute;top:0;width:35px;height:2px;background:#525258}
+.receive-field-slit:before{right:calc(100% + 12px)}.receive-field-slit:after{left:calc(100% + 12px)}
+.receive-field-axis{position:absolute;top:44px;width:1px;height:130px;background:linear-gradient(#d8d8dc68,transparent)}
+.receive-field-mark{position:absolute;top:121px;width:9px;height:9px;background:#fff;transform:rotate(45deg);animation:receiveSignal 2.6s ease-in-out infinite}
+.receive-field-caption{position:absolute;bottom:15px;color:#85858b;font-size:9px;letter-spacing:.3em;font-weight:600}
+@keyframes receiveSignal{0%,100%{opacity:.35;transform:translateY(0) rotate(45deg)}50%{opacity:1;transform:translateY(7px) rotate(45deg)}}
+@media(prefers-reduced-motion:reduce){.receive-field-mark{animation:none}}
+.arrival-slit{position:absolute;top:0;left:calc(50% - 55px);height:2px;width:110px;background:#fff;transform-origin:center;animation:slitOpen 1.2s ease-out both}
+.arrival-drop{position:absolute;top:0;left:calc(50% - 20px);width:40px;height:40px;border-radius:50% 50% 60% 60%;background:#fff;animation:dropFall 1.24s cubic-bezier(.2,.63,.31,1) .13s both}
+@keyframes slitOpen{0%{transform:scaleX(0);opacity:0}20%,56%{transform:scaleX(1);opacity:1}100%{transform:scaleX(.7);opacity:0}}
+@keyframes dropFall{0%{transform:translateY(-24px) scale(.05,.05);opacity:0;border-radius:50%}21%{transform:translateY(4px) scale(.38,1.08);opacity:1;border-radius:47% 47% 65% 65%}38%{transform:translateY(36px) scale(.69,1.23);opacity:1;border-radius:48% 48% 58% 58%}54%{transform:translateY(14vh) scale(1);opacity:1;border-radius:50%}83%{transform:translateY(36vh) scale(.89);opacity:1;border-radius:50%}100%{transform:translateY(46vh) scale(.35);opacity:0;border-radius:50%}}
+*,:before,:after{animation:none!important}
+.arrival-slit{animation:slitOpen 1.2s ease-out both!important}
+.arrival-drop{animation:dropFall 1.24s cubic-bezier(.2,.63,.31,1) .13s both!important}
+.spinner{animation:spin 1s linear infinite!important}
+@media(max-width:359px){.screen{padding-left:16px;padding-right:16px}.intro{margin-top:18px}.intro h1{font-size:36px}.amount-section{margin-top:17px;padding:15px 11px 12px}.quick-amounts button{font-size:10px}.funding-stats strong{font-size:12px}.person-main{padding:15px}.pairing-code{gap:5px}.pairing-code>span{width:42px}.network-pill{font-size:8px}.balance-link{font-size:9px}.transfer-screen{padding-left:18px;padding-right:18px}.transfer-coin{width:145px;height:145px;min-height:145px;left:calc(50% - 72px)}}
+@media(max-height:760px) and (max-width:599px){.intro{margin-top:14px}.intro h1{font-size:36px;margin:8px 0}.amount-section{margin:12px 0 8px;padding-top:13px;padding-bottom:11px}.amount-input input{font-size:49px}.funding-card{margin-top:10px;padding-top:8px}.funding-card p{margin-top:6px}.discovery-card{min-height:90px;padding:12px}.bottom-area{padding-top:7px}.bottom-nav button{min-height:46px}}
+@media(prefers-reduced-motion:reduce){.arrival-slit,.arrival-drop,.spinner{animation:none!important}.arrival-drop{display:none}.arrival-slit{transform:none;opacity:1}}
+
+/* The gesture is a single white drop. */
+.transfer-screen{background:#000;border:0}
+.transfer-result-bottom>a{display:flex;align-items:center;justify-content:center;gap:8px;color:#c7c7ca;font-size:12px;text-decoration:none;margin:0 auto 18px}
+.transfer-result-bottom>a:focus-visible{outline:1px solid #fff;outline-offset:5px}
+.transfer-home-button{display:block;width:100%;min-height:48px;margin-top:8px;background:transparent;border:1px solid #45454a;color:#d8d8dc;font:inherit;font-size:12px;cursor:pointer}
+.transfer-home-button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.transfer-screen:before,.transfer-flight:before,.transfer-flight:after{display:none!important}
+.transfer-flight{min-height:290px}
+.transfer-target{color:#fff}
+.transfer-target i{width:54px;height:2px;background:#fff}
+.flight-rail{top:73px;bottom:20%;background:linear-gradient(#fff8,transparent)}
+.transfer-coin{width:122px;height:148px;min-height:148px;left:calc(50% - 61px);bottom:8%;background:#fff;border:0;border-radius:49% 51% 55% 55% / 36% 36% 64% 64%;overflow:hidden;animation:none!important}
+.transfer-coin:before,.transfer-coin:after{display:none!important}
+.drop-core{position:absolute;left:calc(50% - 12px);top:calc(54% - 12px);width:24px;height:24px;background:#000;border-radius:50%;pointer-events:none}
+.transfer-pending .transfer-flight{overflow:hidden}
+.transfer-departure{position:absolute;bottom:8%;left:calc(50% - 14px);width:28px;height:34px;background:#fff;border-radius:49% 51% 55% 55% / 36% 36% 64% 64%;opacity:0;animation:depart 1s cubic-bezier(.14,.52,.3,1) both!important}
+@keyframes depart{0%{transform:translateY(0) scale(1);opacity:1}75%{opacity:1}100%{transform:translateY(-54vh) scale(.28);opacity:0}}
+.transfer-pending .transfer-bottom{padding-bottom:12px}
+@media(max-width:359px){.transfer-coin{width:106px;height:129px;min-height:129px;left:calc(50% - 53px)}}
+@media(prefers-reduced-motion:reduce){.transfer-departure{animation:none!important;display:none}}
+
+/* Browser presentation: black surfaces, white type and square geometry. */
+.web-preview{background:#000;color:#fff}
+.web-preview .screen,.web-preview .transfer-screen,.web-preview .browser-entry{background:#000!important;color:#fff!important;border-color:#fff;border-radius:0!important}
+.web-preview :is(.amount-section,.discovery-card,.pairing-card,.candidate-card,.person-card,.wallet-sheet,.error-banner,.demo-banner,.funding-good,.funding-alert){background:#000!important;color:#fff!important;border-color:#fff!important;border-radius:2px!important}
+.web-preview :is(.quick-amounts button,.action-button,.quiet-button,.balance-link,.account-button,.pairing-actions button,.wallet-actions button,.mode-switch button,.retry-button,.end-session){border-radius:2px!important}
+.web-preview :is(.quick-amounts button,.balance-link,.account-button,.mode-switch button,.retry-button,.wallet-sheet input){background:#000!important;color:#fff!important;border:1px solid #fff!important}
+.web-preview :is(.quick-amounts button[aria-pressed=true],.action-button,.pairing-actions button:last-child,.wallet-actions button:first-child){background:#fff!important;color:#000!important;border:1px solid #fff!important}
+.web-preview .action-button:disabled{background:#000!important;color:#fff!important}
+.web-preview :is(.intro p,.intro .overline,.demo-banner,.amount-section>label,.amount-input>span,.funding-stats span,.funding-stats strong small,.discovery-card p,.pairing-heading p,.person-copy>span,.person-copy p,.person-footer,.action-caption,.live-notice,.receiving-instruction,.bottom-nav button,.wallet-sheet label,.wallet-sheet p,.wallet-sheet small,.transfer-top,.transfer-destination p,.transfer-bottom p,.transfer-bottom>span){color:#fff!important}
+.web-preview :is(.bottom-nav,.app-header,.person-footer,.funding-card,.wallet-meta,.wallet-explainer){border-color:#fff!important}
+.web-preview .person-avatar{background:#fff!important;color:#000!important}
+.web-preview .brand-mark,.web-preview .brand-period,.web-preview .footer-wordmark{color:#fff!important}
+.web-preview .network-pill i,.web-preview .live-dot{background:#fff!important}
+.web-preview .nearby-art :is(.radar,.phone){border-color:#fff!important}
+.web-preview .nearby-art .phone,.web-preview .nearby-art .phone-b{background:#000!important;color:#fff!important}
+.web-preview .nearby-art .phone i,.web-preview .nearby-art .phone-dot{background:#fff!important}
+.web-preview .nearby-art .phone-a>span{background:#fff!important;color:#000!important}
+.web-preview .balance-link svg{background:#000!important}
+.web-preview .wallet-sheet::backdrop{background:#000}
+.brand{font-size:17px;letter-spacing:.07em;gap:8px}
+.footer-wordmark{font-size:9px;letter-spacing:.08em}
+@media(max-width:359px){.brand{font-size:15px}}
+
+.web-preview .screen,.web-preview .transfer-screen{border:0!important}
+.web-preview .screen *,.web-preview .screen *:before,.web-preview .screen *:after,.web-preview .transfer-screen *,.web-preview .transfer-screen *:before,.web-preview .transfer-screen *:after{border-color:transparent!important}
+.web-preview :is(.amount-section,.discovery-card,.pairing-card,.candidate-card,.person-card,.demo-banner,.funding-good,.funding-alert,.error-banner,.quick-amounts button,.balance-link,.account-button,.wallet-sheet){border:0!important}
+.web-preview :is(.quick-amounts button,.balance-link,.account-button){background:#000!important;color:#fff!important}
+.web-preview .quick-amounts button[aria-pressed=true]{background:#fff!important;color:#000!important}
+.web-preview .pairing-code>span{background:#fff!important;color:#000!important;border:0!important;border-radius:0!important}
+.web-preview .nearby-art .phone,.web-preview .nearby-art .phone-b{background:#fff!important;color:#000!important;border:0!important}
+.web-preview .nearby-art .phone i{background:#000!important}
+.web-preview .nearby-art .phone-a>span{background:#000!important;color:#fff!important}
+.web-preview .nearby-art .phone-b .phone-dot{background:#000!important}
+.web-preview .screen,.web-preview .transfer-screen{border-radius:6px!important}
+.web-preview :is(.amount-section,.discovery-card,.pairing-card,.candidate-card,.person-card,.demo-banner,.funding-good,.funding-alert,.error-banner,.wallet-sheet){border-radius:5px!important}
+.web-preview :is(.quick-amounts button,.action-button,.quiet-button,.balance-link,.account-button,.pairing-actions button,.wallet-actions button,.mode-switch button,.retry-button,.end-session,.pairing-code>span){border-radius:4px!important}
+
+/* Installed mobile app: occupy the device viewport, without the desktop phone frame. */
+.native-app,.native-app body,.native-app #root{width:100%;min-height:100%;margin:0;background:#000}
+.native-app body{padding:0!important;overscroll-behavior:none}
+.native-app :is(.screen,.transfer-screen,.onboarding,.browser-entry){width:100%;max-width:none;margin:0;border:0!important;border-radius:0!important;box-shadow:none!important}
+.native-app :is(.screen,.onboarding,.browser-entry){min-height:100dvh}
+.native-app .transfer-screen{height:100dvh;min-height:0}
+.native-app .screen{padding-left:max(22px,env(safe-area-inset-left));padding-right:max(22px,env(safe-area-inset-right))}
+.native-app .wallet-sheet{width:100%;max-width:none;bottom:0;border-radius:18px 18px 0 0}
+.rpc-settings{border-top:1px solid #303036;margin-top:5px;padding-bottom:9px}
+.rpc-settings input{font-size:12px;padding:12px;margin:7px 0 10px}
+.rpc-settings-actions{display:flex;gap:8px}
+.rpc-settings-actions button{flex:1;border:1px solid #5b5b61;background:#17171a;color:#f2f2f2;min-height:42px;font-size:11px;padding:8px}
+.rpc-settings-actions button:disabled{opacity:.45}
+.rpc-settings>p[role=status]{margin:10px 0;color:#e9e9ec;line-height:1.5}
+.build-version{font-size:11px;font-weight:500;letter-spacing:.04em;color:#aaaab2;margin-left:7px}
+.error-faucet-link{display:inline-flex;align-items:center;gap:5px;margin-top:9px;color:#fff;font-size:11px;text-decoration:underline;text-underline-offset:3px}
+.native-app .screen,.native-app .transfer-screen,.native-app .onboarding,.native-app .wallet-sheet{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.native-app input,.native-app textarea,.native-app [contenteditable=true]{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+
+/* Keep the primary actions visible when network messages or history grow. */
+@media(max-width:599px){
+  .screen{height:100dvh;min-height:0;overflow:hidden}
+  .screen>.app-header,.screen>.topline,.screen>.demo-banner,.screen>.action-area,.screen>.error-banner,.screen>.bottom-area{flex-shrink:0}
+  .screen>.main-content,.screen>.history-view{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+  .screen>.main-content::-webkit-scrollbar,.screen>.history-view::-webkit-scrollbar{display:none}
+  .screen>.action-area{padding-top:4px}
+  .screen>.action-area .live-notice{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .screen>.error-banner{max-height:min(18dvh,132px);overflow-y:auto;margin-top:7px;padding:10px 9px 10px 12px}
+  .screen>.bottom-area{margin-top:0;padding-top:5px;background:#000}
+  .screen>.bottom-area .bottom-nav{padding-top:5px}
+  .screen>.bottom-area .bottom-nav button{min-height:49px}
+  .screen>.bottom-area footer{display:none}
+}
+
+/* Native WebView viewport sizes vary with display scaling; keep this independent of media queries. */
+.native-app,.native-app body,.native-app #root{height:100%;overflow:hidden}
+.native-app .screen{height:100dvh!important;min-height:0!important;display:flex;flex-direction:column;overflow:hidden!important}
+.native-app .screen>.app-header,.native-app .screen>.topline,.native-app .screen>.demo-banner,.native-app .screen>.action-area,.native-app .screen>.error-banner,.native-app .screen>.bottom-area{flex:0 0 auto}
+.native-app .screen>.main-content,.native-app .screen>.history-view{flex:1 1 0;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.native-app .screen>.error-banner{max-height:min(18dvh,132px);overflow-y:auto;margin-top:7px;padding:10px 9px 10px 12px}
+.native-app .screen>.bottom-area{margin-top:0;padding-top:5px;background:#000;z-index:5}
+.native-app .screen>.bottom-area footer{display:none}
+.funding-claim{width:100%;min-height:43px;margin-top:10px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f1f1f2;color:#050505;border:0;border-radius:7px;font:600 12px Manrope,sans-serif;letter-spacing:.01em}
+.funding-claim:disabled{opacity:.48}
+
+.learning-link{display:block;color:#fff;margin:17px 0;font-size:11px;text-decoration:underline;text-underline-offset:3px}

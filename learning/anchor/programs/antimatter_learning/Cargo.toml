@@ -1,0 +1,18 @@
+[package]
+name = "antimatter_learning"
+version = "0.1.0"
+description = "ANTIMATTER Devnet learning program: ping, counter, and PDA profile"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "antimatter_learning"
+
+[features]
+default = []
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "1.2.0"

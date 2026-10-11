@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ANTIMATTER</string>
+    <string name="title_activity_main">ANTIMATTER</string>
+    <string name="package_name">kz.armtranzit.app</string>
+    <string name="custom_url_scheme">kz.armtranzit.app</string>
+</resources>
+

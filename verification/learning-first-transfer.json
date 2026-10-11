@@ -1,0 +1,13 @@
+{
+  "cluster": "devnet",
+  "date": "2026-09-30T11:04:17.283Z",
+  "sender": "ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd",
+  "receiver": "58pAE7Qpq8iS2NWzLztCsTuUnQcwnEjKYvrTR6oBw4Ud",
+  "lamports": 1000000,
+  "signature": "KwgF96gR19aV2ZeF7iF2rr6YBqsykHD96LtDXWSHonmxeTJaJYDm4er2mC466B7D2NWz2DY8BooxJQ79PzGjwkD",
+  "explorer": "https://explorer.solana.com/tx/KwgF96gR19aV2ZeF7iF2rr6YBqsykHD96LtDXWSHonmxeTJaJYDm4er2mC466B7D2NWz2DY8BooxJQ79PzGjwkD?cluster=devnet",
+  "fundingSignature": "5ctcnTopewZE8M16YVKzLEXW9VnoEJWxpCi36KsM38ttZUd8cTZ8Pus2QPFbZUQQU5Gka7Yv8U3oQ9ofvhY2omWb",
+  "slot": 505882108,
+  "feeLamports": 5000,
+  "receiverBalance": 1000000
+}
