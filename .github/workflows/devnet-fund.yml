@@ -1,0 +1,18 @@
+name: Fund Devnet learning wallet
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  airdrop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Solana CLI
+        uses: solana-foundation/github-actions/setup-all@v0.2.15
+        with:
+          solana_version: 2.2.20
+      - name: Request Devnet test SOL for program upgrade
+        run: solana airdrop 1 ALhLoR1vFfUfKGMphNXqgsEngAeeuC3Y5cEbMwhbaDQd --url https://api.devnet.solana.com
