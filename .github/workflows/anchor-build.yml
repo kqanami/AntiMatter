@@ -1,0 +1,33 @@
+name: Build Anchor learning program
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/anchor-build.yml
+      - learning/anchor/**
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Solana and Anchor
+        uses: solana-foundation/github-actions/setup-all@v0.2.15
+        with:
+          solana_version: 2.2.20
+          anchor_version: 1.2.0
+      - name: Build SBF program and IDL
+        working-directory: learning/anchor
+        run: anchor build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: antimatter-learning-sbf
+          path: |
+            learning/anchor/target/deploy/antimatter_learning.so
+            learning/anchor/target/idl/antimatter_learning.json
+          if-no-files-found: error
